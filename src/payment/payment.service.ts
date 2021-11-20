@@ -14,9 +14,9 @@ export class PaymentService {
     return  this.payRepository.find();
     }
     findOne(id:string): Promise<Pay>{
-    return this.payRepository.findOne();
+    return this.payRepository.findOne(id);
     }
-    createPay(id:string): Promise<Pay>{
-    return this.payRepository.save(Pay);
+    createPay(pay:Pay): Promise<Pay>{
+    return this.payRepository.save(pay);
     }
 }

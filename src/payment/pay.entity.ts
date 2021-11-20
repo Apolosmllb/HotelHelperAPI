@@ -3,10 +3,10 @@ import { Column,Entity,PrimaryGeneratedColumn } from 'typeorm';
 export class Pay {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column('payment_amount')
+  @Column({name:'payment_amount'})
   paymentAmount:string;
-  @Column('payment_method')
+  @Column({name:'payment_method'})
   paymentMethod:string;
-  @Column('payment_date')
+  @Column({name:'payment_date'})
   paymentDate:number;
 }

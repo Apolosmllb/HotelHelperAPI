@@ -14,7 +14,7 @@ import { Pay } from "./payment/pay.entity";
     port: 3306,
     username:'root',
     password:'1234',
-    database:'hotelhelper1',
+    database:'hotelhelper',
     entities:[Pay],
     synchronize: true,
     dropSchema:false,

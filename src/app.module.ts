@@ -7,6 +7,7 @@ import { Pay } from "./payment/pay.entity";
 import { PaymentService} from "./payment/payment.service";
 import { PaymentController} from "./payment/payment.controller";
 import { CatalogueModule } from './catalogue/catalogue.module';
+import { ServiceManagementModule } from './service-management/service-management.module';
 
 @Module({
   imports:
@@ -24,6 +25,7 @@ import { CatalogueModule } from './catalogue/catalogue.module';
   }),
       PaymentModule,
       CatalogueModule,
+      ServiceManagementModule,
 
 
   ],

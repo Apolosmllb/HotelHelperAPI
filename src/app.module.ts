@@ -10,6 +10,11 @@ import { CatalogueModule } from './catalogue/catalogue.module';
 import { ServiceManagementModule } from './service-management/service-management.module';
 import { Inventory } from './service-management/inventory.entity';
 import { Searching } from './catalogue/searching.entity';
+import { BookingModule } from './booking/booking.module';
+import { Booking } from './booking/booking.entity';
+import { Customer } from './booking/customer.entity';
+import { Hotel } from './booking/hotel.entity';
+import { Room } from './booking/room.entity';
 
 @Module({
   imports:
@@ -21,13 +26,15 @@ import { Searching } from './catalogue/searching.entity';
     username:'root',
     password:'1234',
     database:'hotelhelper',
-    entities:[Pay,Inventory,Searching],
+    entities:[Pay,Inventory,Searching,Booking],
     synchronize: true,
     dropSchema:false,
   }),
       PaymentModule,
       CatalogueModule,
       ServiceManagementModule,
+      BookingModule,
+
 
 
   ],

@@ -6,6 +6,7 @@ import { PaymentModule } from './payment/payment.module';
 import { Pay } from "./payment/pay.entity";
 import { PaymentService} from "./payment/payment.service";
 import { PaymentController} from "./payment/payment.controller";
+import { CatalogueModule } from './catalogue/catalogue.module';
 
 @Module({
   imports:
@@ -16,12 +17,13 @@ import { PaymentController} from "./payment/payment.controller";
     port: 3306,
     username:'root',
     password:'1234',
-    database:'hotelhelper1',
+    database:'hotelhelper',
     entities:[Pay],
     synchronize: true,
     dropSchema:false,
   }),
       PaymentModule,
+      CatalogueModule,
 
 
   ],

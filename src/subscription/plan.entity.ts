@@ -13,4 +13,7 @@ export class Plan {
   IsAvailable: boolean;
   @Column({name:'plan_category'})
   PLanCategory: string;
+  @Column({name:'deadline'})
+  deadline: boolean;
+
 }

@@ -7,7 +7,7 @@ import {
   Post,
   Res,
 } from '@nestjs/common';
-import { PaymentService } from './payment.service';
+import {PaymentService} from "./payment.service";
 import {Pay} from "./pay.entity";
 
 @Controller('pays')

@@ -8,6 +8,8 @@ import { PaymentService} from "./payment/payment.service";
 import { PaymentController} from "./payment/payment.controller";
 import { CatalogueModule } from './catalogue/catalogue.module';
 import { ServiceManagementModule } from './service-management/service-management.module';
+import { Inventory } from './service-management/inventory.entity';
+import { Searching } from './catalogue/searching.entity';
 
 @Module({
   imports:
@@ -19,7 +21,7 @@ import { ServiceManagementModule } from './service-management/service-management
     username:'root',
     password:'1234',
     database:'hotelhelper',
-    entities:[Pay],
+    entities:[Pay,Inventory,Searching],
     synchronize: true,
     dropSchema:false,
   }),

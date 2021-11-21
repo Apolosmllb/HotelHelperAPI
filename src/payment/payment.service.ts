@@ -3,7 +3,6 @@ import { Pay } from "./pay.entity";
 import { Repository } from "typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
 
-
 @Injectable()
 export class PaymentService {
   constructor(

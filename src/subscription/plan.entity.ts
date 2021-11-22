@@ -13,6 +13,6 @@ export class Plan {
   IsAvailable: boolean;
   @Column({ name: 'plan_category' })
   PLanCategory: string;
-  @Column({ name: 'status' })
+  @Column({ name: 'plan_duration' })
   status: boolean;
 }

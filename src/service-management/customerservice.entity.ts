@@ -3,12 +3,12 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class CustomerService {
   @PrimaryGeneratedColumn()
   id:number;
-  @Column('first_name')
+  @Column({ name:'first_name'})
   firstName: string;
-  @Column('last_name')
+  @Column({ name:'last_name'})
   lastName: string;
-  @Column('room_number_service')
+  @Column({ name:'room_number_service'})
   roomNumberService:number;
-  @Column('phone_number')
+  @Column({ name:'phone_number'})
   phoneNumber:number;
 }

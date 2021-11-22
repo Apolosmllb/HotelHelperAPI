@@ -10,6 +10,9 @@ import { ServiceManagementModule } from './service-management/service-management
 import { Inventory } from './service-management/inventory.entity';
 import { Searching } from './catalogue/searching.entity';
 import { Plan } from './subscription/plan.entity';
+import { CustomerService } from './service-management/customerservice.entity';
+import { Request } from './service-management/request.entity';
+import { Service } from './service-management/services.entity';
 
 @Module({
   imports: [
@@ -20,7 +23,7 @@ import { Plan } from './subscription/plan.entity';
       username: 'root',
       password: '1234',
       database: 'hotelhelper',
-      entities: [Pay, Inventory, Searching, Plan],
+      entities: [Pay, Inventory, Searching, Plan, CustomerService, Request,Service],
       synchronize: true,
       dropSchema: false,
     }),

@@ -9,8 +9,4 @@ export class Inventory {
   productAmount:number;
   @Column({name:'product_Available'})
   productAvailable:boolean;
-  @Column({name:'request_product_name'})
-  request_product_name:string;
-  @Column({name:'request_product_bool'})
-  request_product_bool:boolean;
 }

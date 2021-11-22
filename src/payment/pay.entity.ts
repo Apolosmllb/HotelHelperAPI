@@ -8,5 +8,5 @@ export class Pay {
   @Column({name:'payment_method'})
   paymentMethod:string;
   @Column({name:'payment_date'})
-  paymentDate:number;
+  paymentDate:string;
 }

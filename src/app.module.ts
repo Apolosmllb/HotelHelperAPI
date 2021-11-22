@@ -13,6 +13,7 @@ import { Plan } from './subscription/plan.entity';
 import { CustomerService } from './service-management/customerservice.entity';
 import { Request } from './service-management/request.entity';
 import { Service } from './service-management/services.entity';
+import { Ticket } from './payment/ticket.entity';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { Service } from './service-management/services.entity';
       username: 'root',
       password: '1234',
       database: 'hotelhelper',
-      entities: [Pay, Inventory, Searching, Plan, CustomerService, Request,Service],
+      entities: [Pay, Inventory, Searching, Plan, CustomerService, Request,Service, Ticket],
       synchronize: true,
       dropSchema: false,
     }),

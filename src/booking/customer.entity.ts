@@ -2,7 +2,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity('customers')
 export class Customer {
   @PrimaryGeneratedColumn()
-  id:number;
+  id: number;
   @Column('first_name')
   firstName : string;
   @Column('last_name')
@@ -14,5 +14,5 @@ export class Customer {
   @Column('postal_code')
   postalCode: number;
   @Column('phone_number')
-  phoneNumber:number;
+  phoneNumber: number;
 }

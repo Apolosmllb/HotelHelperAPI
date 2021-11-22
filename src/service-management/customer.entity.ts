@@ -8,7 +8,7 @@ export class Customer {
   @Column('last_name')
   lastName: string;
   @Column('room_number')
-  roomNumber:number;
+  roomNumber: number;
   @Column('phone_number')
-  phoneNumber:number;
+  phoneNumber: number;
 }

@@ -3,8 +3,8 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class usersubscription {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column({ name: 'plane_name' })
-  planeName: string;
+  @Column({ name: 'us_id' })
+  us_id: string;
   @Column({ name: 'type_plan' })
   TypePlane: string;
   @Column({ name: 'plan_category' })

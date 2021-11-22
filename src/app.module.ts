@@ -9,11 +9,11 @@ import { CatalogueModule } from './catalogue/catalogue.module';
 import { ServiceManagementModule } from './service-management/service-management.module';
 import { Inventory } from './service-management/inventory.entity';
 import { Searching } from './catalogue/searching.entity';
-import { Plan } from './subscription/plan.entity';
 import { CustomerService } from './service-management/customerservice.entity';
 import { Request } from './service-management/request.entity';
 import { Service } from './service-management/services.entity';
 import { Ticket } from './payment/ticket.entity';
+import { Subscription } from 'rxjs';
 
 @Module({
   imports: [
@@ -24,7 +24,7 @@ import { Ticket } from './payment/ticket.entity';
       username: 'root',
       password: '1234',
       database: 'hotelhelper',
-      entities: [Pay, Inventory, Searching, Plan, CustomerService, Request,Service, Ticket],
+      entities: [Pay, Inventory, Searching, Subscription, CustomerService, Request,Service, Ticket],
       synchronize: true,
       dropSchema: false,
     }),

@@ -4,7 +4,7 @@ export class CustomerService {
   @PrimaryGeneratedColumn()
   id:number;
   @Column('first_name')
-  firstName : string;
+  firstName: string;
   @Column('last_name')
   lastName: string;
   @Column('room_number_service')

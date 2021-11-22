@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity('planes')
-export class usersubscription {
+export class plans {
   @PrimaryGeneratedColumn()
   id: number;
   @Column({ name: 'plane_name' })

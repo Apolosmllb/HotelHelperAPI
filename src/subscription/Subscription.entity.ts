@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity('planes')
-export class Plan {
+export class Subscription {
   @PrimaryGeneratedColumn()
   id: number;
   @Column({ name: 'plane_name' })
@@ -15,4 +15,6 @@ export class Plan {
   PLanCategory: string;
   @Column({ name: 'plan_duration' })
   status: boolean;
+  @Column({ name: 'us_id' })
+  usid: number;
 }

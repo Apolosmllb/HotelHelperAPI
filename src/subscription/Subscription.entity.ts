@@ -3,18 +3,17 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class Subscription {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column({ name: 'plane_name' })
-  planeName: string;
-  @Column({ name: 'plan_price' })
-  planPrice: string;
-  @Column({ name: 'type_plan' })
-  TypePlane: string;
+  @Column({ name: 'name' })
+  Name: string;
+  @Column({ name: 'price' })
+  Price: string;
+  @Column({ name: 'plan' })
+  lane: string;
   @Column({ name: 'is_available' })
   IsAvailable: boolean;
-  @Column({ name: 'plan_category' })
-  PLanCategory: string;
-  @Column({ name: 'plan_duration' })
+  @Column({ name: 'category' })
+  Category: string;
+  @Column({ name: 'duration' })
   status: boolean;
-  @Column({ name: 'us_id' })
-  usid: number;
+
 }

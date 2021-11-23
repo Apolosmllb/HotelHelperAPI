@@ -3,12 +3,10 @@ import {Entity,Column,PrimaryGeneratedColumn} from "typeorm";
 export class Room {
   @PrimaryGeneratedColumn()
   id:number;
-  @Column('room_type')
+  @Column('type')
   roomType:string;
-  @Column('room_price')
-  roomPrice:number;
-  @Column('room_service')
-  roomService:boolean;
+  @Column('price')
+  Price:number;
   @Column('room_number')
   roomNumber:number;
   @Column('is_available')

@@ -3,10 +3,10 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class Inventory {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column({ name: 'product_name' })
-  productName: string;
-  @Column({ name: 'product_Amount' })
-  productAmount: number;
-  @Column({ name: 'product_Available' })
-  productAvailable: boolean;
+  @Column({ name: 'name' })
+  name: string;
+  @Column({ name: 'amount' })
+  amount: number;
+  @Column({ name: 'is_vailable' })
+  isAvailable: boolean;
 }

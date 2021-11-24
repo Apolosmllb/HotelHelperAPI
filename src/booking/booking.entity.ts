@@ -14,10 +14,13 @@ export class Booking {
 
   @OneToMany(type => Hotel, hotel => hotel.id)
   hotels: Hotel[];
-  @OneToMany(type => Customer, costumer => costumer.id)
-  customers: Customer[];
+
   @OneToMany(type => Room, room => room.id)
   rooms: Room[];
+
+  @OneToOne(type => Customer)
+  @JoinColumn()
+  photo: Customer;
 
 
 }

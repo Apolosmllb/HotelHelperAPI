@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import {Booking} from './booking.entity';
-import { Repository } from 'typeorm';
-import {Hotel } from './hotel.entity';
+import {Repository } from 'typeorm';
+import {Hotel} from './hotel.entity';
 
 @Injectable()
 export class BookingService {
@@ -15,7 +15,7 @@ export class BookingService {
   findOne(id:string): Promise<Booking>{
     return this.bookingRepository.findOne(id);
   }
-  createBooking(booking:Booking,hotel:Hotel): Promise<Booking>{
-    return this.bookingRepository.save(booking,hotel);
+  createBooking(booking:Booking): Promise<Booking>{
+    return this.bookingRepository.save(booking);
   }
 }

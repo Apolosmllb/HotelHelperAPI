@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Booking } from './booking.entity';
 @Entity('customers')
 export class Customer {
   @PrimaryGeneratedColumn()
@@ -11,8 +12,11 @@ export class Customer {
   street: string;
   @Column({name:'city'})
   city: string;
-  @Column({name:'postal_code'})
-  postalCode: number;
   @Column({name:'phone_number'})
   phoneNumber:number;
+
+  @OneToOne(type => Booking)
+  @JoinColumn()
+  photo: Booking;
+
 }

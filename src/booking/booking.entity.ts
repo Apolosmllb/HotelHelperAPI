@@ -12,12 +12,15 @@ export class Booking {
   @Column('description')
   description:string;
 
-  @OneToMany(type => Hotel, hotel => hotel.id) // note: we will create author property in the Photo class below
+  @OneToMany(type => Hotel, hotel => hotel.id)
   hotels: Hotel[];
-  @OneToMany(type => Customer, costumer => costumer.id) // note: we will create author property in the Photo class below
-  customers: Customer[];
-  @OneToMany(type => Room, room => room.id) // note: we will create author property in the Photo class below
+
+  @OneToMany(type => Room, room => room.id)
   rooms: Room[];
+
+  @OneToOne(type => Customer)
+  @JoinColumn()
+  photo: Customer;
 
 
 }

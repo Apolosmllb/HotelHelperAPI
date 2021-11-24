@@ -16,6 +16,6 @@ export class BookingService {
     return this.bookingRepository.findOne(id);
   }
   createBooking(booking:Booking,hotel:Hotel): Promise<Booking>{
-    return this.bookingRepository.save(booking,hotel);
+    return this.bookingRepository.save(booking);
   }
 }

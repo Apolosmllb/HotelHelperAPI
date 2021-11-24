@@ -12,15 +12,17 @@ export class Booking {
   @Column('description')
   description:string;
 
-  @OneToMany(type => Hotel, hotel.booking);
+  @ManyToOne(() => Hotel, hotel=>hotel.booking)
   hotels: Hotel[];
 
-  @ManyToOne(type => Room, rooms => room.booking)
+  @ManyToOne( ()=>Room, room => room.booking)
   rooms: Room[];
 
   @OneToOne(type => Customer)
   @JoinColumn()
-  photo: Customer;
+  customer: Customer;
 
+
+  
 
 }

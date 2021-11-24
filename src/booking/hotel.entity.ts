@@ -2,6 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, JoinColumn, OneToMany } from 't
 import { Customer } from './customer.entity';
 import { Booking } from './booking.entity';
 import { type } from 'os';
+// @ts-ignore
 @Entity('hotels')
 export class Hotel {
   @PrimaryGeneratedColumn()
@@ -15,8 +16,8 @@ export class Hotel {
   @Column('hotel_category')
   hotelCategory:string;
 
-  @OneToMany(type=>Booking, bookings => bookings.booking);
-  hotels:Hotel;
+  @OneToMany(()=>Booking, bookings => bookings.hotels)
+  booking:Booking[];
 
 }
 

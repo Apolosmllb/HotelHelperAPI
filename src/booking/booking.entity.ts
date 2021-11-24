@@ -6,15 +6,16 @@ import {Room } from './room.entity';
 export class Booking {
   @PrimaryGeneratedColumn()
   id:number;
-  @Column('booking_date')
-  bookingDate:number;
-  @Column('booking_description')
-  bookingDescription:string;
+  @Column('date')
+  date:number;
+  @Column('description')
+  description:string;
 
-  @ManyToOne(type => Hotel, Hotel => Hotel.id)
+  @ManyToOne(type => Hotel, hotel => hotel.id)
   @JoinColumn()
   hotel: Hotel;
-  @ManyToOne(type => Room)
+
+  @ManyToOne(type => Room,room => room.id)
   @JoinColumn()
   room: Room;
 }

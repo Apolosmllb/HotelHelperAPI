@@ -1,4 +1,6 @@
-import { Column,Entity,PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Result } from './results.entity';
+
 @Entity('searches')
 export class Searching {
   @PrimaryGeneratedColumn()
@@ -9,4 +11,7 @@ export class Searching {
   date:string;
   @Column({name:'is_available'})
   is_available:boolean;
+
+  @ManyToOne(()=>Result,results=>results.searches)
+  results:Result[];
 }

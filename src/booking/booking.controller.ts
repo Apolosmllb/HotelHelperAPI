@@ -1,11 +1,17 @@
-import { Body, Controller, Get, HttpStatus, Param, Post, Res } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpStatus,
+  Param,
+  Post,
+  Res } from '@nestjs/common';
 import { BookingService } from './booking.service';
 import { Booking } from './booking.entity';
 
 @Controller('bookings')
 export class BookingController {
   constructor(private readonly bookingService:BookingService) {}
-
   @Post()
   async createBooking(@Res() response, @Body() booking:Booking){
     const newBooking = await this.bookingService.createBooking(booking);
@@ -18,7 +24,7 @@ export class BookingController {
   }
 
   @Get('/:id')
-  async findbyId(@Res() response, @Param('id') id){
+  async findById(@Res() response, @Param('id') id){
     const booking = await this.bookingService.findOne(id);
     return response.status(HttpStatus.OK).json({booking});
   }

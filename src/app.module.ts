@@ -15,6 +15,10 @@ import { Request } from './service-management/request.entity';
 import { Service } from './service-management/services.entity';
 import { Ticket } from './payment/ticket.entity';
 import { Result } from './catalogue/results.entity';
+import { Booking } from './booking/booking.entity';
+import { Hotel } from './booking/hotel.entity';
+import { Room } from './booking/room.entity';
+import { Customer } from './booking/customer.entity';
 
 @Module({
   imports: [
@@ -25,7 +29,7 @@ import { Result } from './catalogue/results.entity';
       username: 'root',
       password: '1234',
       database: 'hotelhelper',
-      entities: [Payment, Inventory, Searching, CustomerService, Request,Service, Ticket,Result],
+      entities: [Booking,Payment, Inventory, Searching, CustomerService, Request,Service, Ticket,Result,Hotel,Room,Customer],
       synchronize: true,
       dropSchema: false,
     }),

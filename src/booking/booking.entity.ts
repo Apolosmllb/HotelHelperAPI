@@ -7,9 +7,9 @@ import { Room } from './room.entity';
 export class Booking {
   @PrimaryGeneratedColumn()
   id:number;
-  @Column('date')
+  @Column({name:'date'})
   date:number;
-  @Column('description')
+  @Column({name:'description'})
   description:string;
 
   @ManyToOne(() => Hotel, hotel=>hotel.booking)
@@ -23,6 +23,6 @@ export class Booking {
   customer: Customer;
 
 
-  
+
 
 }

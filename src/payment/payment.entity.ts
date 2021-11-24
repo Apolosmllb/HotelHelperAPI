@@ -1,12 +1,18 @@
-import { Column,Entity,PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Ticket } from './ticket.entity';
 @Entity('payments')
 export class Payment {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column({name:'payment_amount'})
+  @Column({name:'amount'})
   paymentAmount:string;
-  @Column({name:'payment_method'})
+  @Column({name:'method'})
   paymentMethod:string;
-  @Column({name:'payment_date'})
+  @Column({name:'date'})
   paymentDate:string;
+
+
+  @OneToOne(()=>Ticket,ticket=>ticket.payment)
+  @JoinColumn()
+  ticket:Ticket;
 }

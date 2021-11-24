@@ -1,12 +1,12 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-@Entity('products')
-export class Inventory {
+@Entity('planes')
+export class plans {
   @PrimaryGeneratedColumn()
   id: number;
   @Column({ name: 'name' })
   name: string;
-  @Column({ name: 'amount' })
-  amount: number;
-  @Column({ name: 'is_vailable' })
-  isAvailable: boolean;
+  @Column({ name: 'price' })
+  price: string;
+  @Column({ name: 'duration' })
+  duration: string;
 }

@@ -5,11 +5,11 @@ import {Room } from './room.entity';
 @Entity('bookings')
 export class Booking {
   @PrimaryGeneratedColumn()
-  id:number;
-  @Column('booking_date')
-  bookingDate:number;
-  @Column('booking_description')
-  bookingDescription:string;
+  bookingId:number;
+  @Column('date')
+  date:number;
+  @Column('description')
+  description:string;
 
   @ManyToOne(type => Hotel)
   @JoinColumn()

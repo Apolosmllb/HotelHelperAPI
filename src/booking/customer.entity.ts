@@ -3,16 +3,16 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class Customer {
   @PrimaryGeneratedColumn()
   id:number;
-  @Column('first_name')
+  @Column({name: 'first_name'})
   firstName : string;
-  @Column('last_name')
+  @Column({name:'last_name'})
   lastName: string;
-  @Column('street')
+  @Column({name:'street'})
   street: string;
-  @Column('city')
+  @Column({name:'city'})
   city: string;
-  @Column('postal_code')
+  @Column({name:'postal_code'})
   postalCode: number;
-  @Column('phone_number')
+  @Column({name:'phone_number'})
   phoneNumber:number;
 }

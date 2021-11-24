@@ -1,21 +1,22 @@
 import { Injectable } from '@nestjs/common';
-import { Pay } from "./pay.entity";
+import { Payment } from "./payment.entity";
 import { Repository } from "typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
 
 @Injectable()
 export class PaymentService {
   constructor(
-    @InjectRepository(Pay)
-    private payRepository: Repository<Pay>,
+    @InjectRepository(Payment)
+    private payRepository: Repository<Payment>,
     ){}
-    findAll(): Promise<Pay[]>{
+    findAll(): Promise<Payment[]>{
     return  this.payRepository.find();
     }
-    findOne(id:string): Promise<Pay>{
+    findOne(id:string): Promise<Payment>{
     return this.payRepository.findOne(id);
     }
-    createPay(pay:Pay): Promise<Pay>{
-    return this.payRepository.save(pay);
+    createPay(payment:Payment): Promise<Payment>{
+    return this.payRepository.save(payment);
     }
 }
+

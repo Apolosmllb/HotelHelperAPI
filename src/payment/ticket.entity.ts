@@ -5,9 +5,9 @@ export class Ticket {
   @PrimaryGeneratedColumn()
   id: number;
   @Column({name:'type'})
-  Type:string;
+  type:string;
   @Column({name:'date'})
-  Date:string;
+  date:string;
   @Column({name:'amount'})
-  Amount:number;
+  amount:number;
 }

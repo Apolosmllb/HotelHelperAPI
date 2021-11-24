@@ -25,7 +25,7 @@ export class PaymentController {
   }
   @Get('/:id')
   async findById(@Res() response, @Param('id') id) {
-    const pay = await this.paymentService.createPay(id);
-    return response.status(HttpStatus.CREATED).json({ pay });
+    const payment = await this.paymentService.createPay(id);
+    return response.status(HttpStatus.CREATED).json({ payment });
   }
 }

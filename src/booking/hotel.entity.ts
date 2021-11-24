@@ -5,7 +5,7 @@ export class Hotel {
   id:number;
   @Column('name')
   name:string;
-  @Column('hotel_city')
+  @Column('city')
   city:string;
   @Column('category')
   category:string;

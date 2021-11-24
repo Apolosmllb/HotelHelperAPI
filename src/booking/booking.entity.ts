@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Hotel } from './hotel.entity';
 import { Customer } from './customer.entity';
 import { Room } from './room.entity';
@@ -6,16 +6,16 @@ import { Room } from './room.entity';
 @Entity('bookings')
 export class Booking {
   @PrimaryGeneratedColumn()
-  bookingId:number;
+  id:number;
   @Column('date')
   date:number;
   @Column('description')
   description:string;
 
-  @OneToMany(type => Hotel, hotel => hotel.id)
+  @OneToMany(type => Hotel, hotel.booking);
   hotels: Hotel[];
 
-  @OneToMany(type => Room, room => room.id)
+  @ManyToOne(type => Room, rooms => room.booking)
   rooms: Room[];
 
   @OneToOne(type => Customer)

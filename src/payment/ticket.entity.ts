@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Payment } from './payment.entity';
 
 @Entity('tickets')
 export class Ticket {
@@ -10,4 +11,7 @@ export class Ticket {
   date:string;
   @Column({name:'amount'})
   amount:number;
+
+  @OneToOne(()=>Payment,payment=>payment.ticket)
+  payment:Payment
 }

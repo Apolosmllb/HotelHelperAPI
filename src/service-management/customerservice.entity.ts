@@ -7,8 +7,6 @@ export class CustomerService {
   firstName: string;
   @Column({ name:'last_name'})
   lastName: string;
-  @Column({ name:'room_number_service'})
-  roomNumberService:number;
   @Column({ name:'phone_number'})
   phoneNumber:number;
 }

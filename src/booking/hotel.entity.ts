@@ -7,13 +7,13 @@ import { type } from 'os';
 export class Hotel {
   @PrimaryGeneratedColumn()
   id:number;
-  @Column('hotel_name')
+  @Column({name:'name'})
   hotelName:string;
-  @Column('hotel_street')
+  @Column({name:'street'})
   hotelStreet:string;
-  @Column('hotel_city')
+  @Column({name:'city'})
   hotelCity:string;
-  @Column('hotel_category')
+  @Column({name:'category'})
   hotelCategory:string;
 
   @OneToMany(()=>Booking, bookings => bookings.hotels)

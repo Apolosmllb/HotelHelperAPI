@@ -4,13 +4,13 @@ import { Booking } from './booking.entity';
 export class Room {
   @PrimaryGeneratedColumn()
   id:number;
-  @Column('type')
+  @Column({name:'type'})
   roomType:string;
-  @Column('price')
+  @Column({name:'price'})
   Price:number;
-  @Column('room_number')
+  @Column({name:'room_number'})
   roomNumber:number;
-  @Column('is_available')
+  @Column({name:'is_available'})
   isAvailable:boolean;
 
   @OneToMany(()=>Booking,booking=>booking.rooms)

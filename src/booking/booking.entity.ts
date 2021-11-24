@@ -11,7 +11,7 @@ export class Booking {
   @Column('booking_description')
   bookingDescription:string;
 
-  @ManyToOne(type => Hotel)
+  @ManyToOne(type => Hotel, Hotel => Hotel.id)
   @JoinColumn()
   hotel: Hotel;
   @ManyToOne(type => Room)

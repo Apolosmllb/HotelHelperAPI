@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Hotel } from './hotel.entity';
+import {Room } from './room.entity';
 
 @Entity('bookings')
 export class Booking {
@@ -8,4 +10,11 @@ export class Booking {
   bookingDate:number;
   @Column('booking_description')
   bookingDescription:string;
+
+  @ManyToOne(type => Hotel)
+  @JoinColumn()
+  hotel: Hotel;
+  @ManyToOne(type => Room)
+  @JoinColumn()
+  room: Room;
 }

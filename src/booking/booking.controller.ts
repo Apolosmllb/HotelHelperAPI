@@ -25,7 +25,7 @@ export class BookingController {
 
   @Get('/:id')
   async findById(@Res() response, @Param('id') id){
-    const booking = await this.bookingService.findOne(id);
-    return response.status(HttpStatus.OK).json({booking});
+    const booking = await this.bookingService.createBooking(id);
+    return response.status(HttpStatus.CREATED).json({booking});
   }
 }

@@ -5,11 +5,11 @@ export class Room {
   @PrimaryGeneratedColumn()
   id:number;
   @Column({name:'type'})
-  roomType:string;
+  type:string;
   @Column({name:'price'})
-  Price:number;
-  @Column({name:'room_number'})
-  roomNumber:number;
+  price:number;
+  @Column({name:'number'})
+  number:number;
   @Column({name:'is_available'})
   isAvailable:boolean;
 

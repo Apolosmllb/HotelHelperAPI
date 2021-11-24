@@ -2,22 +2,22 @@ import { Body, Controller, Get, HttpStatus, Param, Post, Res } from '@nestjs/com
 import { ServiceManagementService } from './service-management.service';
 import { Inventory } from './inventory.entity';
 
-@Controller('products')
+@Controller('inventories')
 export class ServiceManagementController {
   constructor(private readonly productService: ServiceManagementService) {}
   @Post()
-  async createProduct(@Res() response, @Body() product:Inventory){
-    const newProduct = await this.productService.createProduct(product);
-    return response.status(HttpStatus.CREATED).json({newProduct});
+  async createProduct(@Res() response, @Body() inventory:Inventory){
+    const newInventory = await this.productService.createProduct(inventory);
+    return response.status(HttpStatus.CREATED).json({newInventory});
   }
   @Get()
   async fetchAll(@Res() response){
-    const products = await this.productService.findAll();
-    return response.status(HttpStatus.OK).json({products});
+    const inventories = await this.productService.findAll();
+    return response.status(HttpStatus.OK).json({inventories});
   }
   @Get('/:id')
   async findById(@Res() response, @Param('id') id){
-    const product = await this.productService.createProduct(id);
-    return response.status(HttpStatus.CREATED).json({product});
+    const inventory = await this.productService.createProduct(id);
+    return response.status(HttpStatus.CREATED).json({inventory});
   }
 }

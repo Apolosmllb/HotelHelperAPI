@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-@Entity('products')
+@Entity('inventories')
 export class Inventory {
   @PrimaryGeneratedColumn()
   id: number;
@@ -9,4 +9,5 @@ export class Inventory {
   amount: number;
   @Column({ name: 'is_vailable' })
   isAvailable: boolean;
+
 }
